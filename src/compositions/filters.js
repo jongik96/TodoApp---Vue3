@@ -28,6 +28,14 @@ export const useFilter = () => {
       .sort(fnSort);
   };
 
+  //
+  const getCompletedTodayTodos = (todos) => {
+    return todos.value
+      .filter((todo) => todo.date == today && todo.completed)
+      .slice()
+      .sort(fnSort);
+  };
+
   // 오늘 작업
   const getAllTodayTodos = (todos) => {
     return getActiveTodayTodos(todos).concat(getCompletedTodayTodos(todos)).slice().sort(fnSort);

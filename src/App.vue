@@ -8,14 +8,12 @@
   <todo-list-container/>
 </template>
 
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+<script>
 import { inject } from 'vue'
 import TodoListContainer from './components/TodoListContainer.vue'
 
 export default {
-  name: 'App',
+  name: 'app',
   setup() {
     const today = inject('today')
     return { today }
@@ -24,7 +22,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 hgroup {
   text-align: center;
   font-family: 'Arial Bold';
