@@ -23,7 +23,7 @@ export default {
         const initTodos = (init_todos) => {
             todos.value = init_todos
         }
-        const addTodo = (todo, date) => {
+        const addTodo = (job, date) => {
             todos.value.push({
                 id: storage_id.value++,
                 job: job,
