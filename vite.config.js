@@ -1,10 +1,10 @@
-const path = require("path");
-module.exports = {
-  alias: {
-    "/@/": path.resolve(__dirname, "./src"),
-    "/@components/": path.resolve(__dirname, "./src/components"),
-  },
-};
+// const path = require("path");
+// module.exports = {
+//   alias: {
+//     "/@/": path.resolve(__dirname, "./src"),
+//     "/@components/": path.resolve(__dirname, "./src/components"),
+//   },
+// };
 
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
