@@ -43,8 +43,33 @@
 </template>
 
 <script>
+import { inject } from 'vue'
 export default {
-
+    name: 'TodoList',
+    props: {
+        data: {
+            type: Array,
+            default: [],
+        },
+    },
+    setup() {
+        const removeTodo = inject('removeTodo');
+        const completeTodo = inject('completeTodo');
+        const today = inject('today');
+        const menu = [
+            {
+                str: '할 일 삭제',
+                func: removeTodo,
+            },
+            {
+                str: '할 일 완료',
+                func: completeTodo,
+            },
+        ]
+        return {
+            menu, today, completeTodo
+        }
+    }
 }
 </script>
 
