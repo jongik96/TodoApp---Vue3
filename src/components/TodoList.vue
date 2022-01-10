@@ -33,7 +33,9 @@
               </button>
               <ul class="dropdown-menu dropdown-menu-end">
                   <li v-for="item in menu" :key="item.str">
-                      {{item.str}}
+                      <a class="dropdown-item" @click="item.func(todo.id)">
+                        {{item.str}}
+                      </a>
                   </li>
               </ul>
           </div>
@@ -45,11 +47,13 @@
 <script>
 import { inject } from 'vue'
 export default {
+
+    // Props 로 들어온 데이터를 리스트 형식으로 렌더링하는 역할
     name: 'TodoList',
     props: {
         data: {
             type: Array,
-            default: [],
+            default: [], // 데이터가 들어오지 않을 경우 빈 배열,
         },
     },
     setup() {

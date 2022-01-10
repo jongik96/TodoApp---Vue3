@@ -22,7 +22,7 @@
                           <button
                             type="button"
                             class="btn btn-primary btn-sm float-end"
-                            @click="onAddTodo"
+                            @click="onAddTodo" 
                           >
                             작업 추가
                           </button>
@@ -40,7 +40,7 @@ import { reactive, toRefs, inject, ref } from 'vue'
 export default {
     name: 'TodoListNew',
     setup() {
-        const today = inject('today');
+        const today = inject('today');  // 오늘 날짜를 알아야 이전 날짜 입력을 방지할 수 있음
         const addTodo = inject('addTodo');
         const val_obj = reactive({
             job: '',

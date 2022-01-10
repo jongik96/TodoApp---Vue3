@@ -18,6 +18,7 @@ export default {
   name: 'App',
   setup() {
     const today = inject('today')
+    console.log("상단에 오늘 날짜  출력 " + today)
     return { today }
   },
   components: { TodoListContainer },

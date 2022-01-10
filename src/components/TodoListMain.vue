@@ -61,6 +61,7 @@ export default {
         
         provide('filters', filters)
 
+        // filter 모듈에서 받은 배열을 날짜별로 다시 분리를 한다.
         const groupBy = (todos) => {
             return todos.reduce((acc, cur) => {
                 acc[cur['date']] = acc[cur['date']] || []
@@ -73,6 +74,8 @@ export default {
             filter.value = Number(filter_idx)
         }
 
+        // 새로운 할 일이 추가되거나, 할 일이 삭제되었을 때를 감시한다.
+        // 감시 내역을 실시간으로 반영하여 TodoList 컴포넌트에 새로운 데이터를 전달하는 것이 목적
         watch(
             [() => filter.value, todos.value],
             ([new_filter, new_todos], [old_filter, old_todos]) => {
