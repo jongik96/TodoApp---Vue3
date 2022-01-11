@@ -6,9 +6,11 @@
       </div>
       <todo-list :data="filtered_todos[key]" />
   </div>
+  
   <div class="my-2 mt-5">
+      <hr style="border:solid">
       <span style="background-color: red">&nbsp;</span>&nbsp;
-      <strong>처리하지 못한 작업들</strong>
+      <strong>미 완료 작업</strong>
   </div>
   <todo-list :data="pending_todos"/>
 </template>

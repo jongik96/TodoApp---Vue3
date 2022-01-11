@@ -7,11 +7,11 @@
         <div class="col">
             <div class="btn-group float-end">
                 <button
-                    class="btn btn-sm dropdown-toggle"
+                    class="btn btn-sm rounded dropdown-toggle border border-1 border-dark"
                     type="button"
                     data-bs-toggle="dropdown"
                 >
-                    리스트 필터
+                    필터를 선택해주세요
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li v-for="key in Object.keys(filters)" :key="key">

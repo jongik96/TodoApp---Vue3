@@ -21,10 +21,10 @@
                       <div class="col-6">
                           <button
                             type="button"
-                            class="btn btn-primary btn-sm float-end"
+                            class="btn btn-primary btn-sm rounded float-end"
                             @click="onAddTodo" 
                           >
-                            작업 추가
+                            추가하기
                           </button>
                       </div>
                   </div>
